@@ -162,8 +162,8 @@ with st.sidebar:
 # =====================================================================
 # DESAIN HALAMAN UTAMA (JUDUL & KOTAK PENCARIAN)
 # =====================================================================
-st.markdown("<h1 style='text-align: center; color: #0f172a;'>🎓 Sistem Pencarian Dokumen Skripsi</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 18px; color: #475569; margin-bottom: 30px;'>Pusat penelusuran judul dan abstrak dokumen skripsi menggunakan metode lexical search (BM25).</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #0f172a;'>🎓 Sistem Pencarian judul Skripsi</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 18px; color: #475569; margin-bottom: 30px;'>Pusat penelusuran judul dan abstrak judul skripsi menggunakan metode lexical search (BM25).</p>", unsafe_allow_html=True)
 
 query = st.text_input("🔍 Telusuri (Ketik judul, algoritma, atau kata kunci penelitian)...", placeholder="Contoh: penerapan algoritma k-means pada citra medis...", key="search_bar")
 st.markdown("<br>", unsafe_allow_html=True)
@@ -191,7 +191,7 @@ if query:
         # Notifikasi jika hasil tidak ditemukan (Desain Alert Dashboard Bersih)
         not_found_box = """
         <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-left: 5px solid #ef4444; padding: 15px 20px; border-radius: 6px; margin-bottom: 25px;">
-            <span style="color: #b91c1c; font-weight: 600; font-size: 16px;">⚠️ Dokumen tidak ditemukan. Silakan gunakan kata kunci atau istilah ilmiah lainnya.</span>
+            <span style="color: #b91c1c; font-weight: 600; font-size: 16px;">⚠️ judul tidak ditemukan. Silakan gunakan kata kunci atau istilah ilmiah lainnya.</span>
         </div>
         """
         st.markdown(not_found_box, unsafe_allow_html=True)
@@ -221,7 +221,7 @@ else:
     # Tampilan awal repositori saat aplikasi baru dibuka pertama kali
     st.markdown("""
     <div style="text-align: center; padding: 50px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-        <h3 style='color: #4f46e5; font-family: "Georgia", serif;'>Selamat Datang di sistem pencarian dokumen skripsi </h3>
-        <p style='color: #475569; font-size: 16px;'>Silakan masukkan kata kunci pada kotak penelusuran di atas untuk mencari referensi dokumen skripsi yang relevan.</p>
+        <h3 style='color: #4f46e5; font-family: "Georgia", serif;'>Selamat Datang di sistem pencarian judul skripsi </h3>
+        <p style='color: #475569; font-size: 16px;'>Silakan masukkan kata kunci pada kotak penelusuran di atas untuk mencari referensi judul skripsi yang relevan.</p>
     </div>
     """, unsafe_allow_html=True)
